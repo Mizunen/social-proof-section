@@ -12,7 +12,6 @@ html{
 body{
     margin: 0;
     font-family: 'League Spartan', sans-serif;
-    background-color: hsl(300, 24%, 96%);
 }
 
 main{
@@ -59,7 +58,7 @@ main{
 }
 
 .rating{
-    background-color: hsla(303, 10%, 53%, 7%);
+    background-color: hsl(300, 24%, 96%);
     width: 18rem;
     margin-bottom: 2rem;
     border-radius: 0.5rem;
