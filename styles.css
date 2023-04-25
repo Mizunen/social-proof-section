@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+html{
+        font-size: 15px;
+}
+body{
+    margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    background-color: hsl(300, 24%, 96%);
+}
+
+main{
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+}
+
+.container{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+    color: hsl(300, 43%, 22%);
+}
+
+.description{
+    color: hsl(303, 10%, 53%);
+    text-align: center;
+}
+
+.ratings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    margin: 2rem 0;
+}
+
+.rating{
+    background-color: hsla(303, 10%, 53%, 7%);
+    width: 18rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.user-reviews{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-review{
+    background-color: hsl(300, 43%, 22%);
+    color: hsl(0, 0%, 100%);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    left: -1.5rem;
+}
+
+.user-icon{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+}
+
+.user-icon img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-review__top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -1rem;
+}
+
+.user-review__top p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.user-status{
+    color: hsl(333, 80%, 67%);
+}
+
+.user-review__text{
+    width: 100%;
+    font-size: 1.05rem;
+}
+
+footer{
+    width: 100vw;
+    height: 5vh;
+}
+
+
+@media screen and (min-width: 1440px) {
+    main{
+        height: 100vh;
+    }
+
+    .container{
+        /* margin-top:8rem; */
+        width: 80rem;
+        display: grid;
+        grid-template-areas: 
+        "title-description  rating"
+        "user-reviews user-reviews";
+    }
+
+    .title-and-description{
+        width: 35rem;
+        
+        grid-area: title-description;
+    }
+
+    .title{
+        font-size: 4rem;
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+
+    .description{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .ratings{
+        grid-area: rating;
+        width: 100%;
+        position:relative;
+        left: -4.8rem;
+    }
+
+    .rating{
+        width: 35rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 1.25rem;
+    }
+
+
+    .stars-container{
+        margin-right: 1rem;
+    }
+    .stars-container:first-child{
+        margin-left: 0;
+    }
+    .star-icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .stars-container:nth-of-type(2){
+        margin-left: 0;
+    }
+
+    .rating__text{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .rating:first-of-type{
+        position: relative;
+        left: -5rem;
+    }
+
+    .rating:last-of-type{
+        position:relative;
+        right: -5rem;
+    }
+
+    .user-reviews{
+        margin-top: 5rem;
+        flex-direction: row;
+        grid-area: user-reviews;
+    }
+
+    .user-review{
+        width: 25rem; 
+        margin-right: 5rem;
+    }
+
+    .user-review:nth-of-type(2){
+        position: relative;
+        top: 1rem;
+    }
+
+    .user-review:last-of-type{
+        position: relative;
+        top: 2rem;
+    }
+
+    .user-icon{
+        width: 5rem;
+        height: 5rem;
+    }
+    .user-review__top{
+        font-size: 1.25rem;
+    }
+    .user-review__text{
+        font-size: 1.5rem;
+    }
+
+    
+
+}
